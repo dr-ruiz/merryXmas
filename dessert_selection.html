@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dessert Selection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #121212; color: #ffffff; text-align: center; font-family: Arial, sans-serif; padding: 20px;">
+  <div style="margin-top: 5%;">
+    <h1>what about dessert tho... 🍰🍪🍩</h1>
+
+    <!-- Dessert Options -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px;">
+        <div onclick="selectDessert('Ice Cream')" style="cursor: pointer;">
+          <img src="icecream.jpg" alt="Ice Cream" style="width: 150px; height: 150px; border-radius: 10px;">
+          <p>Ice Cream</p>
+        </div>
+        <div onclick="selectDessert('Cookies')" style="cursor: pointer;">
+          <img src="cookies.jpg" alt="Cookies" style="width: 150px; height: 150px; border-radius: 10px;">
+          <p>Cookies</p>
+        </div>
+        <div onclick="selectDessert('Cake')" style="cursor: pointer;">
+          <img src="cake.jpg" alt="Cake" style="width: 150px; height: 150px; border-radius: 10px;">
+          <p>Cake</p>
+        </div>
+        <div onclick="selectDessert('Donuts')" style="cursor: pointer;">
+          <img src="donuts.jpg" alt="Donuts" style="width: 150px; height: 150px; border-radius: 10px;">
+          <p>Donuts</p>
+        </div>
+        <div onclick="selectDessert('Brownies')" style="cursor: pointer;">
+          <img src="brownies.jpg" alt="Brownies" style="width: 150px; height: 150px; border-radius: 10px;">
+          <p>Brownies</p>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    function selectDessert(dessert) {
+      localStorage.setItem('selectedDessert', dessert);
+      window.location.href = 'summary.html'; // Redirect to summary page
+    }
+  </script>
+</body>
+</html>

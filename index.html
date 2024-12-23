@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merry Christmas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #121212; color: #ffffff; text-align: center; font-family: Arial, sans-serif; padding: 20px;">
+  <div style="margin-top: 5%;">
+    <h1>🎄Merry Christmas Gooey! <3 🎄</h1>
+    <!-- Gif Section -->
+    <div style="margin-top: 10px;">
+      <img src="charliebrownxmas.gif" alt="Cute Gif" style="width: 500px; border-radius: 10px;" />
+    </div>
+    <!-- Naughty or Nice Text -->
+    <div style="margin-top: 20px; font-size: 20px;">
+      Were you naughty or nice this year? 🤔
+    </div>
+
+    <!-- Buttons Section -->
+    <div style="margin-top: 20px;">
+      <button onclick="showGif('nice')" style="margin: 10px; padding: 10px 20px; font-size: 16px;">Nice</button>
+      <button onclick="showGif('naughty')" style="margin: 10px; padding: 10px 20px; font-size: 16px;">Naughty</button>
+    </div>
+
+    <!-- Display Gif Result -->
+    <div id="result" style="margin-top: 20px;"></div>
+  </div>
+
+  <script>
+    function showGif(choice) {
+      const resultDiv = document.getElementById('result');
+      if (choice === 'nice') {
+        resultDiv.innerHTML = '<img src="nicedog.gif" alt="Nice Gif" style="width: 300px; border-radius: 10px;">';
+        resultDiv.innerHTML += '<p style="margin-top: 10px; font-size: 18px;">Well then you deserve a gift! <a href="page2.html" style="color: blue; text-decoration: underline;">Click here!</a></p>';
+      } else {
+        resultDiv.innerHTML = '<img src="grinch.gif" alt="Naughty Gif" style="width: 300px; border-radius: 10px;">';
+        resultDiv.innerHTML += '<p style="margin-top: 10px; font-size: 18px;">Uh oh... click here for your gift then!! 😱 <a href="page2.html" style="color: blue; text-decoration: underline;">Click here!</a></p>';
+      }
+    }
+  </script>
+</body>
+</html>

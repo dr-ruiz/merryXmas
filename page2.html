@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Gift</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #121212; color: #ffffff; text-align: center; font-family: Arial, sans-serif; padding: 20px;">
+  <div style="margin-top: 10%;">
+    <h1>A date with... me? 😘 (I love you) ❤️🎄🎁❄️</h1>
+    <div style="margin-top: 20px;">
+      <img src="meDog.gif" alt="Cute Dog Gif" style="width: 400px; border-radius: 10px;">
+    </div>
+    <!-- Date Selector Form -->
+    <div style="margin-top: 20px;">
+      <label for="date">Are you free on..?: </label>
+      <input type="date" id="date" name="date" style="font-size: 16px; padding: 5px; margin-top: 10px;">
+      <button onclick="saveDate()" style="font-size: 16px; padding: 10px 20px; margin-top: 10px;">Next</button>
+    </div>
+  </div>
+
+  <script>
+    function saveDate() {
+      const date = document.getElementById('date').value;
+      if (date) {
+        localStorage.setItem('selectedDate', date);
+        window.location.href = 'food_selection.html'; // Redirect to food selection page
+      } else {
+        alert('Please select a date first!');
+      }
+    }
+  </script>
+</body>
+</html>

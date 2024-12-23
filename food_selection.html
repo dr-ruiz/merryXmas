@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Selection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #121212; color: #ffffff; text-align: center; font-family: Arial, sans-serif; padding: 20px;">
+  <div style="margin-top: 5%;">
+    <h1>What would you like to eat? 🍕🍔🍣</h1>
+
+    <!-- Food Options -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px;">
+      <div onclick="selectFood('Ramen')" style="cursor: pointer;">
+        <img src="ramen.jpg" alt="Ramen" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Ramen</p>
+      </div>
+      <div onclick="selectFood('Burger')" style="cursor: pointer;">
+        <img src="burger.jpg" alt="Burger" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>American</p>
+      </div>
+      <div onclick="selectFood('Sushi')" style="cursor: pointer;">
+        <img src="sushi.jpg" alt="Sushi" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Sushi</p>
+      </div>
+      <div onclick="selectFood('Pasta')" style="cursor: pointer;">
+        <img src="pasta.jpg" alt="Pasta" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Italian</p>
+      </div>
+      <div onclick="selectFood('Steak')" style="cursor: pointer;">
+        <img src="steak.jpg" alt="Steak" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Steak</p>
+      </div>
+      <div onclick="selectFood('Salad')" style="cursor: pointer;">
+        <img src="salad.jpg" alt="Salad" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Salad</p>
+      </div>
+      <div onclick="selectFood('Seafood')" style="cursor: pointer;">
+        <img src="seafood.jpg" alt="Seafood" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Seafood</p>
+      </div>
+      <div onclick="selectFood('Hotdog')" style="cursor: pointer;">
+        <img src="hotdog.jpg" alt="Hotdog" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Hotdog</p>
+      </div>
+      <div onclick="selectFood('Sandwich')" style="cursor: pointer;">
+        <img src="sandwich.jpg" alt="Sandwich" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Sandwich</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectFood(food) {
+      localStorage.setItem('selectedFood', food);
+      window.location.href = 'activity_selection.html'; // Redirect to activity selection page
+    }
+  </script>
+</body>
+</html>

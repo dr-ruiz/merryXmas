@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activity Selection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #121212; color: #ffffff; text-align: center; font-family: Arial, sans-serif; padding: 20px;">
+  <div style="margin-top: 5%;">
+    <h1>What would you like to do? 🎉🎮🏞️</h1>
+
+    <!-- Activity Options -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px;">
+      <div onclick="selectActivity('City Day')" style="cursor: pointer;">
+        <img src="city.jpg" alt="City Day" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>City Day</p>
+      </div>
+      <div onclick="selectActivity('Nature Walk')" style="cursor: pointer;">
+        <img src="nature.jpg" alt="Nature Walk" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Nature Walk</p>
+      </div>
+      <div onclick="selectActivity('Cinema')" style="cursor: pointer;">
+        <img src="movie.jpg" alt="Cinema" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Cinema</p>
+      </div>
+      <div onclick="selectActivity('Museum/Zoo')" style="cursor: pointer;">
+        <img src="museum.jpg" alt="Museum/Zoo" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Museum/Zoo</p>
+      </div>
+      <div onclick="selectActivity('Karaoke')" style="cursor: pointer;">
+        <img src="karaoke.jpg" alt="Karaoke" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Karaoke</p>
+      </div>
+      <div onclick="selectActivity('Picnic')" style="cursor: pointer;">
+        <img src="picnic.jpg" alt="Picnic" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Picnic</p>
+      </div>
+      <div onclick="selectActivity('Coffee Shop Hop')" style="cursor: pointer;">
+        <img src="coffee.jpg" alt="Coffee Shop Hop" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Coffee Shop Hop</p>
+      </div>
+      <div onclick="selectActivity('Stargazing')" style="cursor: pointer;">
+        <img src="stargazing.jpg" alt="Stargazing" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Stargazing</p>
+      </div>
+      <div onclick="selectActivity('Spa')" style="cursor: pointer;">
+        <img src="spa.jpg" alt="Spa" style="width: 150px; height: 150px; border-radius: 10px;">
+        <p>Spa</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectActivity(activity) {
+      localStorage.setItem('selectedActivity', activity);
+      window.location.href = 'dessert_selection.html'; // Redirect to dessert selection page
+    }
+  </script>
+</body>
+</html>
